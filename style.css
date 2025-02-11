@@ -1,0 +1,377 @@
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* إزالة الهوامش والتعبئة الافتراضية وضبط الصندوق */
+/* إزالة الهوامش والتعبئة الافتراضية وضبط الصندوق */
+* {
+    margin: 3px;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* الأساسيات (من غير @media) */
+body {
+    font-size: 2vw; /* مثال لاستخدام vw */
+}
+
+/* الأجهزة المحمولة الصغيرة */
+@media (max-width: 320px) {
+    body {
+        font-size: 5vw;
+    }
+}
+
+/* الأجهزة المحمولة الكبيرة */
+@media (min-width: 321px) and (max-width: 480px) {
+    body {
+        font-size: 4vw;
+    }
+}
+
+/* الأجهزة المتوسطة (مثل التابلت) */
+@media (min-width: 481px) and (max-width: 768px) {
+    body {
+        font-size: 3.5vw;
+    }
+}
+
+/* الأجهزة الكبيرة (مثل الكمبيوتر المكتبي) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    body {
+        font-size: 2.5vw;
+    }
+}
+
+/* الشاشات الكبيرة (مثل اللابتوب الصغير) */
+@media (min-width: 1366px) and (max-width: 1440px) {
+    body {
+        font-size: 2.5vw;
+    }
+}
+
+/* الشاشات الكبيرة (مثل الشاشات المكتبية الكبيرة) */
+@media (min-width: 1441px) and (max-width: 1920px) {
+    body {
+        font-size: 2vw;
+    }
+}
+
+/* الشاشات العملاقة */
+@media (min-width: 1921px) {
+    body {
+        font-size: 1.8vw;
+    }
+}
+
+
+
+
+body {
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    font-size: 2vw; /* إرجاع هذه القيمة كما كانت */
+}
+
+.solid {
+    border-radius: 4vw;
+    padding: 1.5vw;
+    box-shadow: 0vw 1vw 1vw 1vw rgba(50, 0, 50, 0.4);
+    background-color: rgba(255, 255, 255, 0.2); /* خلفية شفافة */
+    backdrop-filter: blur(1vw); /* تأثير زجاجي */
+    font-family: "Concert One", serif;
+    font-weight: 400;
+    font-style: normal;
+} 
+/* ✅ ضبط قائمة الروابط داخل الناف بار */
+.navbar ul {
+    display: flex;
+    justify-content: center; /* توسيط القائمة */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 3vw; /* المسافة بين الروابط */
+    max-width: 100%; /* عدم السماح بتمدد القائمة أكثر من الشاشة */
+    font-size:4vw;
+    box-shadow: 0 0.5vw 0.5vw 0 rgba(0, 0, 0, 0.10);
+
+  
+}
+ul a{
+    text-decoration: none;
+    color :#85102f;
+}
+.h{
+  align-items: left;
+  padding:2vw;
+  margin-top:2vw;
+  gap:2vw;
+  line-height:9vw;
+  font-size:4vw;
+} 
+.work-list ul {
+    list-style-type: none; /* إزالة النقاط */
+    padding: 0; /* إزالة الحشو الافتراضي */
+    margin: 0; /* إزالة الهوامش */
+    margin-top: 5vw;
+}
+
+.work-list li {
+    font-size: 4vw; /* تحديد حجم الخط باستخدام vw */
+    line-height: 7vw; /* تحديد المسافة بين السطور باستخدام vw */
+    padding-left: 2vw; /* إضافة مسافة من اليسار باستخدام vw */
+}
+.profile-image {
+    position: absolute; /* تحديد الموقع بشكل دقيق */
+    top: 28vw; /* المسافة من الأعلى */
+    right: 0.2vw; /* المسافة من اليمين */
+    width: 47vw; /* تحديد عرض الصورة باستخدام vw */
+    height: auto; /* الحفاظ على نسبة الارتفاع بالنسبة للعرض */
+}
+
+.profile-image img {
+    width: 100%; /* جعل الصورة تأخذ عرض العنصر الأب */
+
+    height: 100%; /* الحفاظ على الارتفاع المتناسب */
+    object-fit: cover; /* الحفاظ على نسبة الأبعاد وضبط الصورة لتغطية المساحة المحددة */
+}
+              /*about*/
+.about-me .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw 4vw; /* المسافة من كل جانب باستخدام vw */
+    font-size: 4vw; /* حجم الخط باستخدام vw */
+    background: linear-gradient(90deg, #f0b6c9, #850f22, #e8628f, #af3048); /* تدرج الألوان */
+    color: white;
+    border: none;
+    border-radius: 1vw; /* حواف مستديرة باستخدام vw */
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease; /* تأثير تفاعلي عند الضغط */
+    margin-top:4vw;
+}
+
+.about-me .btn i {
+    margin-left: 1vw; /* المسافة بين النص والأيقونة باستخدام vw */
+}
+
+/* تأثير عند التفاعل مع الزر */
+.about-me .btn:after {
+    background: linear-gradient(90deg, #af3048, #e8628f, #850f22, #f0b6c9); /* التفاعل مع الزر */
+}
+
+.about-me .btn:active {
+    transform: scale(0.98); /* تأثير تصغير الزر عند الضغط عليه */
+    box-shadow: 0 2vw 4vw rgba(0, 0, 0, 0.2); /* تأثير الظل عند الضغط باستخدام vw */
+}
+
+             /*about*/
+.about-section {
+  border-radius: 4vw;
+    padding: 1.5vw;
+    box-shadow: 0vw 1vw 1vw 1vw rgba(50, 0, 50, 0.4);
+    background-color: rgba(255, 255, 255, 0.2); /* خلفية شفافة */
+    backdrop-filter: blur(1vw); /* تأثير زجاجي */
+    font-family: "Concert One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin:5vw auto; /* توسيط القسم وإضافة مسافة من الأعلى */
+    text-align : center;
+} 
+
+/* تنسيق العنوان */
+.about-section h2 {
+    font-size: 6vw;
+    color: #850f22;
+    margin-bottom: 2vw;
+    box-shadow: 0 0.5vw 0.5vw 0 rgba(0, 0, 0, 0.10);
+}
+
+/* تنسيق الفقرة */
+.about-section p {
+    font-size: 4vw;
+    line-height: 5.5vw;
+    color: #191008;
+    font-family: "Rubik", serif;
+    font-weight: 500vw;
+    margin:3vw;
+}
+.about-section h3{
+  font-size:5vw;
+} 
+
+
+              /* Services */
+.services {
+    border-radius: 4vw;
+    padding: 1.5vw;
+    box-shadow: 0vw 1vw 1vw 1vw rgba(50, 0, 50, 0.4);
+    background-color: rgba(255, 255, 255, 0.2); /* خلفية شفافة */
+    backdrop-filter: blur(1vw); /* تأثير زجاجي */
+    font-family: "Concert One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin:5vw auto; /* توسيط القسم وإضافة مسافة من الأعلى */
+    text-align : center;
+}
+
+.services h2 {
+    font-size: 6vw;
+    color: #850f22;
+    margin-bottom: 2vw;
+    box-shadow: 0 0.5vw 0.5vw 0 rgba(0, 0, 0, 0.10);
+}
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* يجعل العناصر في عدة أعمدة */
+    gap: 3vw; /* المسافة بين العناصر */
+    padding-top: 2vw;
+}
+
+.service-item {
+    background-color: white;
+    border-radius: 2vw;
+    box-shadow: 0 1vw 3vw rgba(0, 0, 0, 0.1);
+    padding: 2vw;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item img {
+    width: 20vw; /* تحديد عرض الصورة */
+    height: 20vw; /* تحديد ارتفاع الصورة */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1vw;
+}
+
+.service-item p {
+    font-size: 3vw;
+    color: #850f22;
+}
+
+.service-item:hover {
+    transform: translateY(-10px); /* تأثير رفع العنصر عند المرور عليه */
+    box-shadow: 0 1vw 3vw rgba(0, 0, 0, 0.3);
+}
+
+/* Contact */
+.contact {
+    border-radius: 4vw;
+    padding: 1.5vw;
+    box-shadow: 0vw 1vw 1vw 1vw rgba(50, 0, 50, 0.4);
+    background-color: rgba(255, 255, 255, 0.2); /* خلفية شفافة */
+    backdrop-filter: blur(1vw); /* تأثير زجاجي */
+    font-family: "Concert One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin:5vw auto; /* توسيط القسم وإضافة مسافة من الأعلى */
+    text-align : center;
+}
+
+.contact h2 {
+    font-size: 6vw;
+    color: #850f22;
+    margin-bottom: 2vw;
+    box-shadow: 0 0.5vw 0.5vw 0 rgba(0, 0, 0, 0.10);
+}
+
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 2vw;
+    border-radius: 2vw;
+    box-shadow: 0 1vw 3vw rgba(0, 0, 0, 0.2);
+}
+
+.contact-form label {
+    font-size: 1.5vw;
+    margin-bottom: 1vw;
+    color: #850f22;
+    display: block;
+    text-align: left;
+}
+
+.contact-form input, .contact-form textarea {
+    width: 100%;
+    padding: 1vw;
+    margin-bottom: 2vw;
+    border: 1px solid #ddd;
+    border-radius: 1vw;
+    font-size: 1.5vw;
+}
+
+.contact-form textarea {
+    resize: vertical;
+}
+
+.submit-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1vw 4vw; /* المسافة من كل جانب باستخدام vw */
+    font-size: 4vw; /* حجم الخط باستخدام vw */
+    background: linear-gradient(90deg, #f0b6c9, #850f22, #e8628f, #af3048); /* تدرج الألوان */
+    color: white;
+    border: none;
+    border-radius: 1vw; /* حواف مستديرة باستخدام vw */
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease; /* تأثير تفاعلي عند الضغط */
+    margin-top:4vw;;
+}
+
+.submit-btn:hover {
+    background-color: #e8628f;
+}
+
+.submit-btn:active {
+    background-color: #af3048;
+}
+.footer{
+ border-radius: 4vw;
+    padding: 1.5vw;
+    box-shadow: 0vw 1vw 1vw 1vw rgba(50, 0, 50, 0.4);
+    background-color: rgba(255, 255, 255, 0.2); /* خلفية شفافة */
+    backdrop-filter: blur(1vw); /* تأثير زجاجي */
+    font-family: "Concert One", serif;
+    font-weight: 400;
+    font-style: normal;
+    margin:5vw auto; /* توسيط القسم وإضافة مسافة من الأعلى */
+    text-align : center;
+}
+.footer ul{
+  list-style-type: none; 
+  display :flex ;
+  font-size :4.5vw;
+ 
+}
+.footer h3{
+  color :black;
+  font-size :5vw;
+}
+.footer p{
+  font-size: 4vw;
+    line-height: 5.5vw;
+    color: #191008;
+    font-family: "Rubik", serif;
+    font-weight: 500vw;
+    margin:3vw;
+    direction: rtl;
+    text-align: center;
+}
+
+.column{
+  display: flex;
+    justify-content: center; /* توسيط القائمة */
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    gap: 3vw; /* المسافة بين الروابط */
+    max-width: 100%; /* عدم السماح بتمدد القائمة أكثر من الشاشة */
+    font-size:4vw;
+    box-shadow: 0 0.5vw 0.5vw 0 rgba(0, 0, 0, 0.10);
+    text-decoration: none;
+    color :#85102f;
+    
+}
